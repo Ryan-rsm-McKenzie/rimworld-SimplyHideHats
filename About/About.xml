@@ -7,6 +7,7 @@
   </supportedVersions>
   <packageId>Ryan.SimplyHideHats</packageId>
   <description>Simply disable or enable hats from rendering on your precious pawns</description>
+  <url>https://steamcommunity.com/workshop/filedetails/?id=3026976147</url>
   <modDependencies>
     <li>
       <packageId>brrainz.harmony</packageId>
