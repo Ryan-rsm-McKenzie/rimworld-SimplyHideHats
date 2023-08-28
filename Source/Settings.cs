@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using RimWorld;
 using SimplyHideHats.Extensions;
 using SimplyHideHats.UIWidgets;
 using UnityEngine;
@@ -61,12 +62,14 @@ namespace SimplyHideHats
 			}
 		}
 
-		public bool ShouldHide(ThingDef hat)
+		public bool ShouldHide(ThingDef thing)
 		{
-			if (this._things.Contains(hat)) {
-				return this._defaultAction == ShowMode.Shown;
+			if (thing.apparel != null && PawnApparelGenerator.IsHeadgear(thing)) {
+				return this._things.Contains(thing) ?
+					this._defaultAction == ShowMode.Shown :
+					this._defaultAction == ShowMode.Hidden;
 			} else {
-				return this._defaultAction == ShowMode.Hidden;
+				return false;
 			}
 		}
 

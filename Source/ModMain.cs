@@ -35,9 +35,9 @@ namespace SimplyHideHats
 			return this.Content.Name;
 		}
 
-		public bool ShouldHide(ThingDef hat)
+		public bool ShouldHide(ThingDef thing)
 		{
-			return this._settings.ShouldHide(hat);
+			return this._settings.ShouldHide(thing);
 		}
 	}
 
