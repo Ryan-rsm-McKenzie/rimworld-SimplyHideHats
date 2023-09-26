@@ -64,7 +64,7 @@ namespace SimplyHideHats
 
 		public bool ShouldHide(ThingDef thing)
 		{
-			if (thing.apparel != null && PawnApparelGenerator.IsHeadgear(thing)) {
+			if (thing.apparel != null && Defs.ThingDefOf.Headgear.Contains(thing)) {
 				return this._things.Contains(thing) ?
 					this._defaultAction == ShowMode.Shown :
 					this._defaultAction == ShowMode.Hidden;
